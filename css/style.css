@@ -523,6 +523,116 @@ p { margin-bottom: 1rem; }
 }
 
 /* ============================================================
+   STEPS SECTION – "3 Schritte zu Ihrer Gesundheit"
+   ============================================================ */
+.steps {
+  padding: var(--section-padding) 0;
+  background: var(--color-bg);
+  position: relative;
+}
+
+.steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* Verbindungslinie zwischen den Schritten */
+.steps__grid::before {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: 16.66%;
+  right: 16.66%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200, 169, 79, 0.4), rgba(200, 169, 79, 0.4), transparent);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.step-card {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.step-card__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-secondary);
+  color: var(--color-primary-dark);
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 20px rgba(200, 169, 79, 0.15);
+}
+
+.step-card:hover .step-card__number {
+  background: var(--color-secondary);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(200, 169, 79, 0.3);
+}
+
+.step-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.step-card__text {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.steps__cta {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.steps__cta-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.steps__cta .btn {
+  padding: 1.05rem 2.5rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .steps__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .steps__grid::before { display: none; }
+  .step-card__number {
+    width: 80px;
+    height: 80px;
+    font-size: 1.85rem;
+  }
+}
+
+/* ============================================================
    PHILOSOPHIE / ABOUT SECTION
    ============================================================ */
 .about__grid {
