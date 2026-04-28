@@ -761,8 +761,8 @@ p { margin-bottom: 1rem; }
    ============================================================ */
 .praxis-showcase {
   padding: 2.5rem 0 3rem;
-  background: var(--color-bg-dark);
-  color: var(--color-text-inverse);
+  background: var(--color-bg-alt);
+  color: var(--color-text);
 }
 
 .praxis__hero-row {
@@ -792,12 +792,12 @@ p { margin-bottom: 1rem; }
 
 .praxis__hero-text h3 {
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--color-text-inverse);
+  color: var(--color-primary-dark);
   margin-bottom: 1rem;
 }
 
 .praxis__hero-text p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-light);
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -832,7 +832,7 @@ p { margin-bottom: 1rem; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(17, 29, 51, 0.5) 0%, transparent 50%);
+  background: linear-gradient(to top, rgba(17, 29, 51, 0.65) 0%, transparent 55%);
   opacity: 0;
   transition: opacity var(--transition-base);
   border-radius: var(--radius-lg);
@@ -866,7 +866,7 @@ p { margin-bottom: 1rem; }
   gap: 3rem;
   margin-top: 1.25rem;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border);
 }
 
 .praxis__stat { text-align: center; }
@@ -881,7 +881,7 @@ p { margin-bottom: 1rem; }
 
 .praxis__stat-label {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-light);
   margin-top: 0.25rem;
 }
 
